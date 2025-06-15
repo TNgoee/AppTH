@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Smartphone",
+      "price": 10000000,
+      "img": "image3.jpg",
+      "des": "High-performance smartphone with 128GB storage"
+    },
+    {
+      "id": "2",
+      "name": "T-Shirt",
+      "price": 200000,
+      "img": "image3.jpg",
+      "des": "Comfortable cotton T-shirt"
+    }
+  ]
+}
