@@ -1,28 +1,23 @@
 import 'dart:convert';
 
-class CategoryModel {
-  final int? id;
-  final String name;
-  final String desc;
+class Category {
+  int? id;
+  String? name;
+  String? img;
 
-  CategoryModel({this.id, required this.name, required this.desc});
+  Category({this.id, this.name, this.img});
 
-  // Convert a Breed into a Map. The keys must correspond to the names of the
-  // columns in the database.
-  Map<String, dynamic> toMap() {
-    return {'id': id, 'name': name, 'desc': desc};
+  Category.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+    img = json['img'];
   }
 
-  factory CategoryModel.fromMap(Map<String, dynamic> map) {
-    return CategoryModel(id: map['id']?.toInt() ?? 0, name: map['name'] ?? '', desc: map['desc'] ?? '');
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['img'] = img;
+    return data;
   }
-
-  String toJson() => json.encode(toMap());
-
-  factory CategoryModel.fromJson(String source) => CategoryModel.fromMap(json.decode(source));
-
-  // Implement toString to make it easier to see information about
-  // each breed when using the print statement.
-  @override
-  String toString() => 'Category(id: $id, name: $name, desc: $desc)';
 }

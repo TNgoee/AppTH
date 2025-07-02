@@ -37,7 +37,7 @@
 //                 child: ListView.builder(
 //                   itemCount: lstCate.length,
 //                   itemBuilder: (context, index) {
-//                     return itemCateView(lstCate[index]);
+//                     return itemCateView(lstCate[index], context);
 //                   },
 //                 ),
 //               ),
